@@ -9,17 +9,20 @@
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
   [![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/)
 
+  [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
+  [![Transformers](https://img.shields.io/badge/🤗_Transformers-FF9D00?style=for-the-badge)](https://huggingface.co/docs/transformers)
+
   <br/>
-
-  [![Live Demo](https://img.shields.io/badge/Live_Demo-10b981?style=for-the-badge&logo=vercel&logoColor=white)](https://newsense-ai.vercel.app)
+  
+  [![Live Demo](https://img.shields.io/badge/Live_Demo-10b981?style=for-the-badge&logo=vercel&logoColor=white)](https://newssenseai.vercel.app/)
   [![License](https://img.shields.io/github/license/MusaIslamFahad/NewsSense-AI?style=for-the-badge)](LICENSE)
-
+  [![Stars](https://img.shields.io/github/stars/MusaIslamFahad/NewsSense-AI?style=for-the-badge)](https://github.com/MusaIslamFahad/NewsSense-AI/stargazers)
+  [![Forks](https://img.shields.io/github/forks/MusaIslamFahad/NewsSense-AI?style=for-the-badge)](https://github.com/MusaIslamFahad/NewsSense-AI/fork)
+  
 </div>
 
 
 **Intelligent News Understanding System** which classify any news headline or article into 10 categories, detect sentiment, and extract named entities using state of the art NLP.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/newssense-ai)
 
 ---
 
