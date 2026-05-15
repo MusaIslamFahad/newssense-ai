@@ -1,6 +1,6 @@
 # 📰 NewsSense AI
 
-**Intelligent News Understanding System** — classify any news headline or article into 10 categories, detect sentiment, and extract named entities using state-of-the-art NLP.
+**Intelligent News Understanding System** which classify any news headline or article into 10 categories, detect sentiment, and extract named entities using state of the art NLP.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/newssense-ai)
 
@@ -131,16 +131,16 @@ vercel
 
 The `notebook/training_pipeline.py` file is a full ML research pipeline (run on Kaggle with GPU):
 
-1. **Data loading & validation** — 90K+ news headlines, null checks
-2. **Robust text cleaning** — HTML stripping, URL removal, lowercasing
-3. **EDA** — class distribution, word count stats, per-category word clouds
-4. **Feature engineering** — TF-IDF (15K features, bigrams, sublinear TF)
-5. **Classical ML** — Logistic Regression + Linear SVM with **5-fold stratified CV**
-6. **Model comparison** — per-class F1 bar charts, confusion matrices
-7. **Error analysis** — misclassified examples sorted by confidence
-8. **DistilBERT fine-tuning** — `fp16`, early stopping, `load_best_model_at_end`
-9. **Explainability** — LIME with **batched** `predict_proba_fn` (fixed from v1)
-10. **HuggingFace Hub push** — deploy model artifact for production inference
+1. **Data loading & validation**: 90K+ news headlines, null checks
+2. **Robust text cleaning**: HTML stripping, URL removal, lowercasing
+3. **EDA**: class distribution, word count stats, per-category word clouds
+4. **Feature engineering**: TF-IDF (15K features, bigrams, sublinear TF)
+5. **Classical ML**: Logistic Regression + Linear SVM with **5-fold stratified CV**
+6. **Model comparison**: per-class F1 bar charts, confusion matrices
+7. **Error analysis**: misclassified examples sorted by confidence
+8. **DistilBERT fine-tuning**: `fp16`, early stopping, `load_best_model_at_end`
+9. **Explainability**: LIME with **batched** `predict_proba_fn` (fixed from v1)
+10. **HuggingFace Hub push**: deploy model artifact for production inference
 
 ### Typical results on this dataset
 
