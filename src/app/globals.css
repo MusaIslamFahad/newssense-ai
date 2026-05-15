@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables ─────────────────────────────────────── */
+:root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-ibm-plex-mono: 'IBM Plex Mono', 'Courier New', monospace;
+  --font-dm-sans: 'DM Sans', system-ui, sans-serif;
+
+  --ink: #0a0906;
+  --ink-soft: #141209;
+  --parchment: #f4edd8;
+  --parchment-dim: #c8bfa8;
+  --parchment-muted: #7a7264;
+  --gilt: #c9a84c;
+  --gilt-bright: #e8c96a;
+  --gilt-dim: #5a4a1e;
+  --rule: rgba(201, 168, 76, 0.2);
+}
+
+/* ── Base ──────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ink);
+  color: var(--parchment);
+  font-family: var(--font-dm-sans);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink-soft);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gilt-dim);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gilt);
+}
+
+/* ── Selection ─────────────────────────────────────────── */
+::selection {
+  background: var(--gilt-dim);
+  color: var(--parchment);
+}
+
+/* ── Typography utilities ──────────────────────────────── */
+.font-serif { font-family: var(--font-playfair) !important; }
+.font-mono  { font-family: var(--font-ibm-plex-mono) !important; }
+.font-sans  { font-family: var(--font-dm-sans) !important; }
+
+/* ── Newspaper rule ────────────────────────────────────── */
+.rule-gilt {
+  border-color: var(--rule);
+}
+
+.rule-double {
+  border-top: 3px double var(--gilt);
+  padding-top: 0.75rem;
+}
+
+/* ── Gold shimmer (loading) ────────────────────────────── */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--ink-soft) 0%,
+    rgba(201, 168, 76, 0.15) 50%,
+    var(--ink-soft) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* ── Ticker ────────────────────────────────────────────── */
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker-inner {
+  display: inline-block;
+  animation: ticker 40s linear infinite;
+}
+
+@keyframes ticker {
+  0%   { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ── Confidence bar animation ──────────────────────────── */
+.bar-animate {
+  animation: barFill 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes barFill {
+  from { width: 0%; }
+  to   { width: var(--bar-width); }
+}
+
+/* ── Fade up ───────────────────────────────────────────── */
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up-delay-1 { animation-delay: 0.1s; }
+.fade-up-delay-2 { animation-delay: 0.2s; }
+.fade-up-delay-3 { animation-delay: 0.3s; }
+.fade-up-delay-4 { animation-delay: 0.4s; }
+
+/* ── Textarea ──────────────────────────────────────────── */
+textarea:focus {
+  outline: none;
+  border-color: var(--gilt) !important;
+  box-shadow: 0 0 0 1px var(--gilt);
+}
+
+/* ── Entity highlight ──────────────────────────────────── */
+.entity-PER  { background: rgba(201, 168, 76, 0.18); color: #e8c96a; border-bottom: 1px solid #c9a84c; }
+.entity-ORG  { background: rgba(41, 128, 185, 0.18); color: #5dade2; border-bottom: 1px solid #2980b9; }
+.entity-LOC  { background: rgba(39, 174, 96, 0.18);  color: #58d68d; border-bottom: 1px solid #27ae60; }
+.entity-MISC { background: rgba(155, 89, 182, 0.18); color: #af7ac5; border-bottom: 1px solid #9b59b6; }
+
+/* ── Scan line effect (for "analyzing" state) ──────────── */
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gilt), transparent);
+  animation: scanDown 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes scanDown {
+  0%   { top: 0;    opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
