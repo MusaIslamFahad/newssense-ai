@@ -95,28 +95,19 @@ The backend runs all three HuggingFace models **in parallel** via serverless Nex
 ---
 ## 🔧 How It Works
 
-## 🔧 How It Works
-
 ```mermaid
 flowchart TD
     A([👤 User submits headline via web UI]) --> B
-
     B[POST /api/analyze\nNext.js Serverless Route] --> C
-
     C{Promise.all\nAll 3 models fire simultaneously}
-
     C --> D[🟦 BART-Large-MNLI\nNews Classification]
     C --> E[🟩 RoBERTa\nSentiment Analysis]
     C --> F[🟧 BERT-NER\nNamed Entity Recognition]
-
     D --> G
     E --> G
     F --> G
-
     G[Results aggregated\ninto JSON response] --> H
-
     H([🖥️ Frontend renders results])
-
     H --> I[📊 Confidence Chart\n10-category scores]
     H --> J[🎭 Sentiment Badge\nPositive / Neutral / Negative]
     H --> K[🔍 Entity Highlights\nPER · ORG · LOC · MISC]
