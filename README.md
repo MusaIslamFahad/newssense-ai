@@ -30,10 +30,11 @@ A full-stack NLP web app that classifies any news headline into 10 categories, d
 
 ## 🖼️ Screenshot
 
-![NewsSense AI — Homepage](screenshots/homepage.png)
+![NewsSense AI — Homepage](assets/screenshots/homepage.png)
 
 > _The editorial newspaper-themed UI - paste any headline into the input box and hit Analyse_
 
+<!--
 | Analysis Results |
 |-----------------|
 | ![Analysis Results](screenshots/results.png) |
@@ -92,6 +93,8 @@ The backend runs all three HuggingFace models **in parallel** via serverless Nex
 `Business` · `Technology` · `Politics` · `Sports` · `Entertainment` · `Health` · `Science` · `World` · `Environment` · `Education`
 
 ---
+## 🔧 How It Works
+
 ## 🔧 How It Works
 
 ```mermaid
