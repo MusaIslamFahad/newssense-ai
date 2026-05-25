@@ -2,7 +2,7 @@
 
 # 📰 NewsSense AI
 
-A full-stack NLP web app that classifies any news headline into 10 categories, detects sentiment, and extracts named entities in ~2–3 seconds powered by three HuggingFace transformer models running in parallel, built with Next.js 14 and deployed on Vercel.
+**A full-stack NLP web app that classifies any news headline into 10 categories, detects sentiment and extracts named entities in ~2–3 seconds powered by three HuggingFace transformer models running in parallel, built with Next.js 14 and deployed on Vercel.**
 
 <p align="center">
 
@@ -19,6 +19,8 @@ A full-stack NLP web app that classifies any news headline into 10 categories, d
 <img src="https://img.shields.io/github/stars/MusaIslamFahad/NewsSense-AI?style=for-the-badge&logo=github&label=GitHub%20Stars&color=0f172a" />
 
 </p>
+
+![NewsSense AI Banner](https://raw.githubusercontent.com/MusaIslamFahad/newssense-ai/main/assets/banner.png)
 
 </div>
 
